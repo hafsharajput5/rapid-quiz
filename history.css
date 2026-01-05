@@ -84,6 +84,29 @@ body {
   margin: 10px 0;
   cursor: pointer;
 }
+#options .one{
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+}
+#options .two{
+  font-size: 18px;
+  font-weight: bold;
+  color:orangered;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#options .three{
+  font-size: 18px;
+  font-weight: bold;
+  color: greenyellow;
+  margin-bottom: 10px;
+}
+form{
+  color: skyblue;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .btn {
   padding: 15px 25px;
@@ -98,6 +121,8 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 1;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .back-btn {

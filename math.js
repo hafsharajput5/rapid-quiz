@@ -155,9 +155,9 @@ function showWrongAnswers() {
 
   wrongAnswers.forEach((item, index) => {
     html += `
-      <p><b>Q${index + 1}:</b> ${item.question}</p>
-      <p>❌ Your Answer: ${item.selected}</p>
-      <p>✅ Correct Answer: ${item.correct}</p>
+      <p class="one"><b>Q${index + 1}:</b> ${item.question}</p>
+      <p class="two">❌ Your Answer: ${item.selected}</p>
+      <p class="three">✅ Correct Answer: ${item.correct}</p>
       <hr>
     `;
   });
