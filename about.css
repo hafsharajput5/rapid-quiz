@@ -1,0 +1,277 @@
+*{
+  padding:0;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  box-sizing: border-box;
+  }
+  
+#header{
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  }
+  
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(3,3,143);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  left: 50%;
+}
+
+.btn::after {
+  right: 50%;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 50%;
+}
+
+h1{
+  color: rgb(0,176,194);
+  font-size: 50px;
+  }
+
+.btn {
+  padding: 15px 25px;
+  border: 5px solid rgb(3, 3, 243);
+  border-radius: 999px;
+  color: rgb(3, 3, 243);
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+#card {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid deepskyblue;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px auto;
+  padding: 15px 20px;
+}
+  
+.card h2 {
+  font-size: 30px;
+  margin-bottom: 6px;
+  color: deepskyblue;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+p{
+  color: aliceblue;
+}
+
+.about {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+span {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: deepskyblue;
+  color: lightseagreen;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translate3d(-10px, -10px, -10px);
+  transition: all 0.3s ease;
+}
+
+.card:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translate3d(-10px, -10px, -10px);
+  transition: all 0.3s ease;
+}
+
+#footer {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  background: white;
+}
+
+body{
+  background: url("https://i.postimg.cc/LX8WV7hb/illustration-lonely-solitude-girl-studying-coding-laptop-window-night-city-view-young-woman-learning.jpg") no-repeat center center / cover;
+}
+
+@media (max-width: 479px) {
+  #card {
+    width: 95%;
+    max-width: 100%;
+    padding: 10px;
+  }
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+  .card h2 {
+    font-size: 18px;
+  }
+  .card p, .about {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  #footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  #card {
+    width: 90%;
+    max-width: 90%;
+    padding: 12px;
+  }
+  .card {
+    max-width: 90%;
+    padding: 12px 14px;
+  }
+  .card h2 {
+    font-size: 22px;
+  }
+  .card p, .about {
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+  #footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (min-width: 640px) and (max-width: 767px) {
+  #card {
+    width: 85%;
+    max-width: 85%;
+    padding: 15px;
+  }
+  .card {
+    max-width: 80%;
+    padding: 15px 18px;
+  }
+  .card h2 {
+    font-size: 26px;
+  }
+  .card p, .about {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #card {
+    width: 80%;
+    max-width: 800px;
+    padding: 18px;
+  }
+  .card {
+    max-width: 85%;
+    padding: 18px 22px;
+  }
+  .card h2 {
+    font-size: 28px;
+  }
+  .card p, .about {
+    font-size: 19px;
+  }
+  .btn {
+    font-size: 20px;
+    padding: 16px 20px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #card {
+    width: 75%;
+    max-width: 900px;
+    padding: 20px;
+  }
+  .card {
+    max-width: 90%;
+    padding: 20px 25px;
+  }
+  .card h2 {
+    font-size: 32px;
+  }
+  .card p, .about {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 24px;
+    padding: 18px 25px;
+  }
+  #footer {
+    font-size: 20px;
+    padding: 18px;
+    }
+}
+@media (min-width: 1280px) {
+  #card {
+    width: 70%;
+    max-width: 1000px;
+    padding: 25px;
+  }
+  .card {
+    max-width: 900px;
+    padding: 25px 30px;
+  }
+  .card h2 {
+    font-size: 35px;
+  }
+  .card p, .about {
+    font-size: 22px;
+  }
+  .btn {
+    font-size: 26px;
+    padding: 20px 30px;
+  }
+  #footer {
+    font-size: 22px;
+    padding: 20px;
+  }
+}

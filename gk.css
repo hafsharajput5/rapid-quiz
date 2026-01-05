@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+#header {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("https://i.postimg.cc/cCJxqXCX/neon-quiz-screen-with-question-and-exclamation-vector-56866420.jpg") no-repeat center center / cover;
+}
+
+#main {
+  width: 60%;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+#main h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 32px;
+  color: rgb(19, 231, 51);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+#quizBox {
+  width: 95%;
+  padding: 30px 35px;
+  border: 2px solid rgb(21, 164, 221);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+#quizBox:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+#questionCount {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#question {
+  font-size: 26px;
+  color: white;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+#options label {
+  display: block;
+  font-size: 20px;
+  color: black;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 15px 25px;
+  border: 5px solid rgb(3, 3, 243);
+  border-radius: 999px;
+  color: rgb(3, 3, 243);
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.back-btn {
+  margin-bottom: 15px;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(3, 3, 143);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.btn::before {
+  left: 50%;
+}
+
+.btn::after {
+  right: 50%;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 50%;
+}
+
+#footer {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  background: white;
+}
+
+@media (max-width: 479px) {
+  #main {
+    width: 95%;
+    padding: 18px;
+    margin: 30px auto;
+  }
+  
+  #main h2 {
+    font-size: 22px;
+  }
+  
+  #question {
+    font-size: 18px;
+  }
+  
+  #questionCount {
+    font-size: 14px;
+  }
+  
+  #options label {
+    font-size: 16px;
+  }
+  
+  .btn {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  
+  #footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+  #main {
+    width: 90%;
+    padding: 22px;
+  }
+  
+  #main h2 {
+    font-size: 24px;
+  }
+  
+  #question {
+    font-size: 20px;
+  }
+  
+  #options label {
+    font-size: 17px;
+  }
+  
+  .btn {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+  
+  #footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  #main {
+    width: 75%;
+    padding: 30px;
+  }
+  
+  #main h2 {
+    font-size: 26px;
+  }
+  
+  #question {
+    font-size: 22px;
+  }
+  
+  #options label {
+    font-size: 18px;
+  }
+  
+  .btn {
+    font-size: 18px;
+    padding: 14px 22px;
+  }
+  
+  #footer {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main {
+    width: 50%;
+    padding: 40px;
+  }
+  
+  #main h2 {
+    font-size: 34px;
+  }
+  
+  #question {
+    font-size: 28px;
+  }
+  
+  #options label {
+    font-size: 21px;
+  }
+  
+  .btn {
+    font-size: 22px;
+    padding: 20px 30px;
+  }
+  
+  #footer {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #main {
+    width: 45%;
+    padding: 50px;
+  }
+  
+  #main h2 {
+    font-size: 36px;
+  }
+  
+  #question {
+    font-size: 30px;
+  }
+  
+  #options label {
+    font-size: 22px;
+  }
+  
+  .btn {
+    font-size: 24px;
+    padding: 22px 34px;
+  }
+  
+  #footer {
+    font-size: 24px;
+    padding: 25px;
+  }
+}
